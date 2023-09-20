@@ -67,8 +67,19 @@ footer, footer div {
     header{
         letter-spacing: 0px;
     }
+
     #kapcsolat span {
         width: 100%;
-        
+        margin: 2% 0;
+    }
+
+    #kozosseg p {
+        display: none;
+    }
+
+    #kozosseg a {
+        display: block;
+        width: 75%;
+        margin: 1rem auto;
     }
 }
