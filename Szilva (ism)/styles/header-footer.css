@@ -67,4 +67,8 @@ footer, footer div {
     header{
         letter-spacing: 0px;
     }
+    #kapcsolat span {
+        width: 100%;
+        
+    }
 }
