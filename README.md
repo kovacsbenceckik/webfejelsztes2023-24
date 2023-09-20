@@ -1,1 +1,2 @@
-# Programozási alapismeretek - 10.b
+# webfejelsztes2023-24
+
