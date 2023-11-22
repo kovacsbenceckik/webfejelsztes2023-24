@@ -1,6 +1,3 @@
-from tkinter import E
-
-
 n = int(input("Bolha: "))
 print(f"{n} -> ", end="")
 while n != 0:
