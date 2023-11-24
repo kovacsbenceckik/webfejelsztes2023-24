@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-""" Matrix style rain using Python 3 and curses. """
+# """ Matrix style rain using Python 3 and curses. """
 import argparse
 import curses
 import datetime
