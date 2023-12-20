@@ -1,19 +1,52 @@
-# irasd ki minden elem ketszereset
-
+# Adott egy egész számokból álló lista:
 lista = [5, 3, 7, 4, 12, -9, 31, 7]
+hossz = len(lista)
 
-n = len(lista)
-# print("F3: ", end="")
-# for i in range(n):
-#     print(2*lista[i], end=" ")
+'''
+1. Írasd ki a lista elemeit 
+egymás mellé szóközzel elválasztva!
+'''
+# Kimenet:
+# F1: 5 3 7 4 12 -9 31 7
+print("F1:", end=" ")
+# MO1 (Zalán)
+# i = 0
+# while i < hossz:
+#     print(lista[i], end=" ")
+#     i += 1
+
+# MO2 (Gábor)
+for i in range(hossz):
+    print(lista[i], end=" ")
+print()
+
+# MO3 (t_fnorbi)
+# for elem in lista:
+#     print(elem, end=" ")
+
+# MO4 (python)
+# print(*lista)
+
 
 
 '''
-írasd ki a 3-mal osztható elemeket!-
+2. Írasd ki az elemeket pontosvesszővel
+és szóközzel elválasztva! Az utolsó
+elem után ne legyen már pontosvessző!
 '''
+# Kimenet:
+# F2: 5; 3; 7; 4; 12; -9; 31; 7
 
-# kimenet: F5: 2 12 -9
-print("F5: ", end="")
-for i in range(n):
-    if lista[i] % 3 == 0:
-        print(lista[i], end=" ")
+# MO1
+# print("F2:", end=" ")
+# for i in range(hossz):
+#     if i == hossz-1:
+#         print(lista[i])
+#     else:
+#         print(lista[i], end="; ")
+
+# MO2
+print("F2:", end=" ")
+for i in range(hossz-1):
+    print(lista[i], end="; ")
+print(lista[hossz-1])
