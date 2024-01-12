@@ -102,7 +102,13 @@ else:
 
 
 # F10
-
+i = 1
+while i < n-1 and not(x[i] > x[i-1] and x[i] > x[i+1]):
+    i += 1
+if i < n-1:
+    print("10. Van lokális maximum, helye:", i+1, "értéke:", x[i])
+else:
+    print("10. Nincs lokális maximuma!") 
 
 # F11
 
