@@ -49,3 +49,30 @@ for i in range(n):
         paratlan.append(x[i])
 print("Páros számok:", paros)
 print("Páratlan számok:", paratlan)
+# F6
+# Válogasd ki a lokális minimumok indexeit!
+#szomszédjainál kisebb: x[i] < x[i-1] and x[i] < x[i+1]
+lokalminek = []
+for i in range(1, n-1):
+    if x[i] < x[i-1] and x[i] < x[i+1]:
+        lokalminek.append(i)
+print("lokalis minimumok indexei:", lokalminek)
+
+# F7
+# Válogasd szét a lista indexeit az alapján,
+# hogy az érték az adott helyen:
+# nő / csökken / állandó!
+novekedes = []
+csokkenesek = []
+allandok = []
+for i in range(1, n):
+    if x [i] > x[i-1]:
+        novekedes.append(i)
+    elif x[i] < x[i-1]:
+        csokkenesek.append(i)
+    else:
+        allandok.append(i)
+print("7. Növekedők, csökkenők, állandók az előzőhöz képest:")
+print("Növekedők:", novekedes)
+print("Csökkenők:", csokkenesek)
+print("Állandók:", allandok)
