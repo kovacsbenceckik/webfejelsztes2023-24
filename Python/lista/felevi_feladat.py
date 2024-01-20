@@ -7,6 +7,7 @@ targyak = [
     "Digitális kultúra", "ITA",
     "Webprog", "Adatbázis"
 ]
+print(targyak[4][3])
 
 # Szakmai tantárgy-e?
 szakmai = [
