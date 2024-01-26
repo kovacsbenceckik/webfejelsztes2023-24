@@ -9,3 +9,5 @@ for i in range(n):
     nappaliak.append(nappali)
     estiek.append(esti)
 print(nappaliak, estiek)
+
+# for i in range(len(esti)):
