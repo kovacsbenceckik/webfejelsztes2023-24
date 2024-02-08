@@ -8,24 +8,9 @@ for i in range(n):
     sor = input().split()
     minimum.append(int(sor[0]))
     maximum.append(int(sor[1]))
-db = 0
-
-for i in range(n):
-    if maximum[i] < 0:
-        db += 1
-
-utsonap = -1
-streak = 0
 
 i = 0
-
-while streak != k and i < n:
+while i < n-1 and not(maximum[i] < 0 and maximum[i+1] < 0):
     i += 1
-    if maximum[i] < 0:
-        streak += 1
-        if streak == k:
-            utsonap = i + 1
-    else:
-        streak = 0
-
-print(db, utsonap)
+if i < n:
+    print(i)

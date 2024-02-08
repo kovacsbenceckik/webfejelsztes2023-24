@@ -31,7 +31,7 @@ for i in range(n):
 print("3. feladat:", osszeg)
 #F4 - Maximum kivalasztas
 maxi = 0
-maxe = (magyar[0] + matek[0] + tori[0])
+maxe = (magyar[0] + matek[0] + tori[0]) / 3
 for i in range(1, n):
     atlag = (magyar[i] + matek[i] + tori[i]) / 3
     if atlag > maxe:
@@ -49,19 +49,15 @@ else:
     print("5. feladat: Nincs.")
 
 # F6
-anev = 0
-anevpoz = [] 
-for i in range(n):     
-    hossz = len(nevek[i]) -1
-    if nevek[i][hossz] == "a":         
-        anev += 1         
-        anevpoz.append(i)
-print("6. feladat:", anev, end=" ")
-sza = len(anevpoz)-1 
-for i in range(len(anevpoz)-1):
-    print(nevek[anevpoz[i]], end=" ")
-print(nevek[anevpoz[sza]])
-
+nevet = []
+for i in range(n):
+    hossz = len(nevek[i])
+    if nevek[i][hossz-1] == "a":
+        nevet.append(nevek[i])
+print("6. feladat:",len(nevet), end=" ")
+for i in range(len(nevet)):
+    print(nevet[i], end=" ")
+print()
 # F7
 i = 0
 while i < n and not(magyar[i] == matek[i] and magyar[i] == tori[i] and matek[i] == tori[i]):
@@ -72,16 +68,33 @@ else:
     print("7. feladat: Nincs.")
     
 # F8
-
-print("8. feladat:")
-
-
+i = 0
+while i < n and magyar[i] != 5:
+    i += 1
+if i < n:
+    for j in range(i+1, n):
+        if magyar[j] == 5 and matek[j] <= matek[i]:
+            i = j
+    print("8. feladat:", nevek[i])
+else:
+    print("8. feladat:", -1)
 # F9
+bukottdiak = 0
+for i in range(n):
+    if magyar[i] == 1 or matek[i] == 1 or tori[i] == 1:
+        bukottdiak += 1
 
-print("9. feladat:")
-
-
+print(f"9. feladat: {round((bukottdiak/n)*100, 2)}%")
 # F10
-
 print("10. feladat:")
+for i in range(n):
+    if i == 0:
+        if matek[i] < matek[i+1]:
+            print(i+1, end=" ")
+    elif i == n-1:
+        if matek[i] < matek[i-1]:
+            print(i+1, end=" ")
+    else:
+        if matek[i] < matek[i+1] or matek[i] < matek[i-1]:
+            print(i+1, end=" ")
 
