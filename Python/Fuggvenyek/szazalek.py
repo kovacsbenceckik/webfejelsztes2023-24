@@ -1,13 +1,13 @@
 #print("2 / 5 = ", round(2/5*100), "%", sep="")
-def kiir(x, y):
-    print(f"{x} / {y} = {round(x/y*100)}%")
-
+def szazalek(x, y):
+    # print(f"{x} / {y} = {round(x/y*100)}%")
+    return x/y*100
      
-kiir(4, 6)
-kiir(2, 3)
-kiir(5, 34)
-kiir(6, 21)
-kiir(68, 578)
+print(szazalek(4, 6))
+# kiir(2, 3)
+# kiir(5, 34)
+# kiir(6, 21)
+# kiir(68, 578)
 
 
 
