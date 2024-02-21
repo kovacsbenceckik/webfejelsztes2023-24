@@ -6,7 +6,9 @@ def generalas(oldalak):
     befogo2 = randrange(1, 101)
     atfogo = sqrt(befogo1**2 + befogo2**2)
     atfogo = round(atfogo, 2)
-    oldalak.extend([befogo1, befogo2, atfogo])
+    oldalak.append(befogo1)
+    oldalak.append(befogo2)
+    oldalak.append(atfogo)
     print(oldalak)
 
 def haromszog(a, b):
