@@ -9,9 +9,9 @@ def sor(n, a, b):
 def sakktabla(n, a, b):
     for i in range(n):
         if i % 2 == 0:
-            sor(n, a, b)
+            sor(n, "c", "i")
         else: 
-            sor(n, a, b)
+            sor(n, "i", "c")
 
 
 def main():
