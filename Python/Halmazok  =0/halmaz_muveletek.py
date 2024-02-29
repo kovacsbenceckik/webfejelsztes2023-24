@@ -41,5 +41,7 @@ def main():
     print("Metszet:", m)
     print("Unió:", u)
     print("Külonbség:", k)
+    szim = szimm_diff(a, b)
+    print("Szimmetrikus differencia:", szim)
     
 main()
