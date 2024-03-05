@@ -32,6 +32,16 @@ def kulonbseg(a, b):
                 kulonb.append(b[i])
     return kulonb
 
+def szimm_diff(a, b):
+    eredmeny = []
+    un = unio(a, b)
+    metsz = metszet(a, b)
+    
+    for i in range(len(un)):
+        if not bennevan(un[i], metsz):
+            eredmeny.append(un[i])
+    return eredmeny
+
 def main():
     a = [2, 7, 1, 5, 3]
     b = [1, 6, 8, 7]

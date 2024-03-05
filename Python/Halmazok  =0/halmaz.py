@@ -1,14 +1,14 @@
-def eleme(elem, lista):
+def eleme(elem, y):
     i = 0
-    while i < len(lista) and not(lista[i] == elem):
+    while i < len(y) and not(y[i] == elem):
         i += 1
-    return i < len(lista)
+    return i < len(y)
 
-def egyediek(lista):
+def egyediek(x):
     eredmeny = []
-    for i in range(len(lista)):
-        if not eleme(lista[i], eredmeny):
-            eredmeny.append(lista[i])
+    for i in range(len(x)):
+        if not eleme(x[i], eredmeny):
+            eredmeny.append(x[i])
     return eredmeny
     
 def main():
