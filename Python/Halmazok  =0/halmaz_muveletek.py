@@ -53,5 +53,5 @@ def main():
     print("Külonbség:", k)
     szim = szimm_diff(a, b)
     print("Szimmetrikus differencia:", szim)
-    
+
 main()
