@@ -34,29 +34,36 @@ def bennevan(elem, lista):
         i += 1
     return i < len(lista)
 
-def fordulo(aktualis, megoldas, hibaszam):
-    betu = input("\n Betű:")
-    if not(bennevan(betu, megoldas)):
-        hibaszam += 1
-    print(megoldas)
-    csere(betu, aktualis, megoldas)
-    system("cls")
-    kirajzol(aktualis)
-    return hibaszam
-
 def eredmenyhirdetes(hibaszam):
     if hibaszam <= 2:
+        system("cls")
         print("Nyertél :)")
     else:
+        system("cls")
         print("Vesztettél :(")
-    
+
+def fordulo(aktualis, megoldas, hibaszam, rosszak):
+    betu = input("\n Betű:")
+    if len(betu) > 1:
+        return len(rosszak)
+    if len(betu) == 1 and not(bennevan(betu, rosszak)) and not(bennevan(betu, megoldas)):
+        hibaszam += 1
+        rosszak.append(betu)
+    system("cls")
+    print(megoldas)
+    print("Hibák száma:", hibaszam)
+    print("Rosszak listája:", rosszak)
+    csere(betu, aktualis, megoldas)
+    kirajzol(aktualis)
+    return hibaszam
 
 def jatek(megoldas):
     aktualis = kezdeti_allapot(len(megoldas))
     kirajzol(aktualis)
     hibaszam = 0
+    rosszak = []
     while bennevan("_", aktualis) and hibaszam <= 2:
-        hibaszam = fordulo(aktualis, megoldas, hibaszam)
+        hibaszam = fordulo(aktualis, megoldas, hibaszam, rosszak)
     eredmenyhirdetes(hibaszam)
 
 def mian():
