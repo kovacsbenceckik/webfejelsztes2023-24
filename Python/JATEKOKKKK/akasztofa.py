@@ -57,7 +57,6 @@ def fordulo(aktualis, megoldas, hibaszam, rosszak):
         hibaszam += 1
         rosszak.append(betu)
     system("cls")
-    print(megoldas)
     print("Hibák száma:", hibaszam)
     print("Rosszak listája:", rosszak)
     csere(betu, aktualis, megoldas)
@@ -76,7 +75,6 @@ def jatek(megoldas):
 def mian():
     system("cls")
     megoldas = sorsolas()
-    print(megoldas)
     jatek(megoldas)
 
 mian()
