@@ -42,8 +42,15 @@ def eredmenyhirdetes(hibaszam):
         system("cls")
         print("Vesztettél :(")
 
+def megoldottuk(aktualis, megoldas):
+    for i in range(len(megoldas)):
+        aktualis[i] = megoldas[i]
+
 def fordulo(aktualis, megoldas, hibaszam, rosszak):
     betu = input("\n Betű:")
+    if betu == megoldas:
+        megoldottuk(aktualis, megoldas)
+        return len(rosszak)
     if len(betu) > 1:
         return len(rosszak)
     if len(betu) == 1 and not(bennevan(betu, rosszak)) and not(bennevan(betu, megoldas)):
