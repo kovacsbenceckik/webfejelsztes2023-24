@@ -19,16 +19,16 @@ Ha nem adjunk meg a választható
 pozitivak paraméter értékét, akkor
 alapértelmezetten hamis legyen!
 '''
-def feltolt(a, pozitivak = False):
-    lista = []
-    for i in range(a):
-        if pozitivak == True:    
+def feltolt(n, pozitivak = False):
+    eredmeny = []
+    for i in range(n):
+        r = 0
+        if pozitivak:
             r = randint(1, 100)
         else:
             r = randint(-50, 50)
-        lista.append(r)
-    return lista
-
+        eredmeny.append(r)
+    return eredmeny
 # Tesztelés
 def main():
     print(feltolt(12))
