@@ -1,4 +1,5 @@
 from random import randint
+from time import time
 
 # Eljárás:
 # Megcseréli az "x" lista
@@ -45,20 +46,43 @@ def buborek(x):
 # számokkal feltöltve!
 def feltolt(n):
     eredmeny = []
+
     for i in range(n):
         r = randint(1, 9)
         eredmeny.append(r)
+    
     return eredmeny
 
-def main():
-    x = [5, 2, 7, 1, 2, 3]
-    print("Eredeti:", x)
-    buborek(x)
-    print("Rendezett:", x)
+def feltolt_nagyjabol_rendezett(n):
+    eredmeny = []
+    eredmeny.append(randint(1, 9))
 
-    x = feltolt(100)
-    print("Random lista:", x)
-    buborek(x)
-    print("Rendezett random:", x)
+    for i in range(n):
+        elozo = eredmeny[i]
+        r = randint(1, 10)
+        if r <= 8:
+            eredmeny.append(elozo + 1)
+        else:
+            eredmeny.append(elozo - 1)
+    return eredmeny
+
+def teszt(n):
+    x = feltolt_nagyjabol_rendezett(n)
+    print("Lista feltöltve!")
+
+    y = x.copy()
+    kezdet = time()
+    minkiv(y)
+    veg = time()
+    print("Minkiv kész:", veg - kezdet)
+
+    z = x.copy()
+    kezdet = time()
+    buborek(z)
+    veg = time()
+    print("Buborekos kész:", veg - kezdet)
+
+def main():
+    teszt(1000)
 
 main()
