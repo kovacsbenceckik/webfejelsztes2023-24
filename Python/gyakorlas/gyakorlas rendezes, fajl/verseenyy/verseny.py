@@ -57,7 +57,7 @@ def rendez(nevek, pontok):
 def kiir(nevek, pontok):
     fw = open("eredmeny.txt", "w", encoding="UTF-8")
     for i in range(len(nevek)):
-        fw.write(f"{nevek[i]}: {pontok[i]}\n")
+        fw.write(f"{nevek[i]} - {pontok[i]}\n")
     fw.close()
 
 def main():
