@@ -25,7 +25,7 @@ def futtatas():
     fw.seek(0)
     sor = fw.readline()
     db = 0
-    while sor != '':
+    while sor != "":
         db += 1
         sor = fw.readline()
     fw.write(f"A program {db + 1}. alkalommal futott sikeresen!\n")
