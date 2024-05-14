@@ -1,0 +1,80 @@
+body {
+    width: 65%;
+    margin: auto;
+    background-position: right;
+    background-size: 15vw;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 5%;
+}
+
+.container-fluid {
+    clear: both;
+}
+
+table {
+    background-color: white;
+}
+
+nav {
+    width: 10vw;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    background-color: darkred;
+    list-style: none;
+    overflow: auto;
+    border: 2px dotted;
+}
+
+nav a {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    float: left;
+    padding: 20px;
+}
+
+ol {
+    list-style-type: upper-alpha;
+}
+
+img {
+    max-width: 100%;
+    width: 100px;
+}
+
+#linkek+ol li {
+    margin: 10px 0px;
+}
+
+.jobbkep {
+     
+}
+
+@media screen and (max-width: 1600px) {
+    nav {
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    nav a {
+        padding: 20px 0px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    nav a {
+        font-size: 60%;
+    }
+}
