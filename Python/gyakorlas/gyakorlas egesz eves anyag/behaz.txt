@@ -1,0 +1,19 @@
+18
+Porszivozas 20 2
+Mosogep-bepakolas 10 4
+Szemetes 5 3
+Ruhahajtogatas 15 4
+Ablaktisztitas 25 1
+Viragontozes 5 7
+Furdoszoba-takaritas 40 1
+Hutotakaritas 30 1
+Vasalas 15 4
+Padlofelmosas 15 1
+Parnahuzatcsere 5 1
+Posta 15 3
+Lomtalanitas 45 1
+Fozes 90 4
+Mosogatas 35 3
+Teregetes 10 4
+Favagas 20 3
+Bevasarlas 25 3
