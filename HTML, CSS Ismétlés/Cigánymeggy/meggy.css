@@ -14,12 +14,15 @@ h1, h2 {
     clear: both;
 }
 
-table {
+.table {
     background-color: white;
+    border: 1px black solid;
 }
 
 nav {
     width: 10vw;
+    position: fixed;
+    left: 0;
 }
 
 nav ul {
@@ -29,6 +32,7 @@ nav ul {
     list-style: none;
     overflow: auto;
     border: 2px dotted;
+    border-style: dashed;
 }
 
 nav a {
@@ -38,6 +42,12 @@ nav a {
     color: white;
     float: left;
     padding: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #500d0d;
 }
 
 ol {
@@ -53,7 +63,40 @@ img {
     margin: 10px 0px;
 }
 
+/* ----------------------------------------- */
 
+body {
+    background-color: rgba(125, 0, 0, 20%);
+    background-image: url("kepek/mozaik.png");
+    background-repeat: repeat-y;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+.jobbkep {
+    width: 15em;
+    float: right;
+    margin: 10px 0 5px 20px;
+}
+
+#meggy {
+    width: 1em;
+}
+
+section p span {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+/* 
+    em: karakterméret
+    rem: root karakterméret => html
+*/
+
+/* ------------------------------------------ */
 
 @media screen and (max-width: 1600px) {
     nav {
