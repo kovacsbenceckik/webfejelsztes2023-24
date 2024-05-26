@@ -18,3 +18,43 @@ h1 {
     font-size: 300%;
     font-variant: small-caps;
 }
+
+h2 {
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    height: 20em;
+    margin: auto;
+    display: block;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+.rekorder {
+    color: #850707;
+}
+
+#rekord span {
+    font-weight: bold;
+    text-decoration: underline 1px dotted black;
+    text-transform: uppercase;
+}
+
+#tortenelem {
+    overflow: auto;
+}
+
+#tortenelem  p{
+    margin: 0 5%;
+    float: left;
+    width: 40%;
+    vertical-align: top;
+}
