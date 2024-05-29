@@ -1,0 +1,17 @@
+A vizsga során csak az alábbi weboldalak
+és aloldalaik használhatók fel!
+
+1. W3Schools:
+https://www.w3schools.com/
+
+2. Bootstrap:
+https://getbootstrap.com/
+
+3. HTML validator:
+https://validator.w3.org/
+
+4. CSS validator:
+https://jigsaw.w3.org/css-validator/
+
+5. Python module index:
+https://docs.python.org/
