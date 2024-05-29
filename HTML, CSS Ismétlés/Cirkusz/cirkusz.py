@@ -26,17 +26,72 @@ def arak_megadasa():
     arak[r] * 0.5
     return arak
 
+def kiir():
+    idok = idok_megadasa()
+    arak = arak_megadasa()
+    print("Árlista:")
+    for i in range(len(idok)):
+        print(f"{idok[i]} {arak[i]}")
+
+def befajl(letszam, idopontok, varosok):
+    fr = open("eloadasok.txt", "r", encoding="UTF-8")
+    sor = fr.readline().split("---")
+    while sor != [""]:
+        letszam.append(int(sor[0]))
+        idopontok.append(sor[1])
+        varosok.append(sor[2].strip())
+        sor = fr.readline().split("---")
+    fr.close()
+
+def nyolcoraskezdes(idopontok, varosok):
+    nyolcasok = []
+    for i in range(len(varosok)):
+        if idopontok[i] == "20:00":
+            nyolcasok.append(varosok[i])
+    return nyolcasok
+
+def legkevesebb(letszam, varosok):
+    mini = 0
+    for i in range(1, len(letszam)):
+        if letszam[i] < letszam[mini]:
+            mini = i
+    telitettseg = round((letszam[mini] / 400) * 100, 2)
+    print(f"c) Legkevesebb néző városa: {varosok[mini]}. Telítettség: {telitettseg}%")
+
+def milliomosoke(letszam):
+    osszeg = 0
+    n = len(letszam)
+    for i in range(n):
+        osszeg += letszam[i] * 4300
+    print(f"d) A cirkusz bevétele: {osszeg/1000000} millió Ft.")
+ 
+def delelott(idopontok):
+    osszesites = 0
+    for i in range(len(idopontok)):
+        if int(idopontok[i][1]) <= 2 and int(idopontok[i][0]) == 1:
+            if int(idopontok[i][1]) <= 2 and int(idopontok[i][3]) == 0:
+                print(idopontok[i])
+                osszesites += 1
+    return osszesites
+
 def main():
-    print("1. feladat\n")
+    print("1. feladat \n")
     nev = input("Mi a neve? ")
     igeny = int(input("Mennyit szeretne keresni? "))
     valasz = ajanlat(igeny)
     print(f"Kedves {nev}! A végső ajánlatunk: {valasz} Ft.\n")
+    print()
     print("2. feladat")
-    idok = idok_megadasa()
-    arak = arak_megadasa()
-    print("Árlista:\n")
-    for i in range(len(idok)):
-        print(f"{idok[i]} {arak[i]}")
-
+    kiir()
+    print()
+    print("3. feladat")
+    letszam, idopontok, varosok = [], [], []
+    befajl(letszam, idopontok, varosok)
+    nyolcasok = nyolcoraskezdes(idopontok, varosok)
+    print(f"b) 20:00-kor kezdődő előadások helye: {nyolcasok}")
+    legkevesebb(letszam, varosok)
+    milliomosoke(letszam)
+    hanydarab = delelott(idopontok)
+    print(f"e) {hanydarab} előadás kezdőtött délelőtt.")
+    
 main()
