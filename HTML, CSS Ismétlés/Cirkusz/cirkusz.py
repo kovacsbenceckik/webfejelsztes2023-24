@@ -64,14 +64,13 @@ def milliomosoke(letszam):
     for i in range(n):
         osszeg += letszam[i] * 4300
     print(f"d) A cirkusz bevétele: {osszeg/1000000} millió Ft.")
- 
+
 def delelott(idopontok):
     osszesites = 0
     for i in range(len(idopontok)):
-        if int(idopontok[i][1]) <= 2 and int(idopontok[i][0]) == 1:
-            if int(idopontok[i][1]) <= 2 and int(idopontok[i][3]) == 0:
-                print(idopontok[i])
-                osszesites += 1
+        akt = idopontok[i].split(":")
+        if int(akt[0]) < 12:
+            osszesites += 1
     return osszesites
 
 def main():
