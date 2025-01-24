@@ -1,0 +1,15 @@
+Cegléd -> 3
+Albertirsa -> 4
+Debrecen -> 9
+Szeged -> 6
+Veszprém -> 5
+Pilis -> 5
+Tápiószőlős -> 8
+Kecskemét -> 4
+Eger -> 4
+Ceglédbercel -> 5
+Budapest -> 7
+Csemő -> 3
+Abony -> 3
+Pécs -> 7
+Szolnok -> 6
